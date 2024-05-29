@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Website</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    
+
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>MangaVerse.</a>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Manga.html">Manga</a>
+            <a href="category.html">Category</a>
+            <!-- <a href="#latest">Latest</a>
+            <a href="#family">Family</a> -->
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <!-- Add the search box -->
+            <div class="search-container" id="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                <button id="search-submit">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+   
+
+
+     <!--Action Section start-->
+    <section class="action container" id="action">
+        
+        <div class="under-content">
+            <!--Manga box 1-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/iron man.png" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Iron Man</h2>
+                        <span class="manga-type">Action,Adventure</span>
+                        <a href="Pages/ironman.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 2-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/spiderman.png" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">SpiderMan</h2>
+                        <span class="manga-type">Action,Sci-Fi,Mystery</span>
+                        <a href="Pages/20th Century Boys.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 3-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Tomodachi Game.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Tomodachi Game</h2>
+                        <span class="manga-type">Mystery,Psychological,Drama</span>
+                        <a href="Pages/TomodachiGame.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+    </section>
+    <!--Underrated Magas end-->
+
+
+
+   
+
+    
+
+   
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    <div id="manga-list" class="manga-list"></div>
+    
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About MangaVerse</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem. Sed posuere suscipit magna sed aliquet.</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@mangaverse.com</p>
+                    <p>Phone: +123456789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+
+    
+
+
+     <!-- Swiper JS -->
+     <script src="JS/swiper-bundle.min.js"></script>
+    
+    
+    <!--custome js file link-->
+    <script src="main.js"></script>
+    
+
+ 
+</body>
+</html>

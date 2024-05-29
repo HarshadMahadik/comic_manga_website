@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@900&display=swap');
+
+html, body {
+    background-color: #424242; /* Black background color */
+}
+
+
+:root{
+    --red:#E50914;
+    --black:#000000;
+    --light-color:#181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: "Merriweather Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color: var(--red);
+}
+ header .navbar a{
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    padding: 5rem 1.5rem;
+    color: #fff;
+ }
+
+ header .navbar a.active,
+ header .navbar a:hover{
+    color: #fff;
+    background: var(--red);
+ }
+
+ header .icons i,
+ header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5 rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background: var(--red);
+ }
+
+ header .icons i:hover,
+ header .icons a:hover{
+    color: var(--red);
+    background: #fff;
+    transform: rotate(360deg);
+ }
+
+ header .icons #menu-bars{
+    display: none;
+ }
+
+/* Add space between read icon and heart icon */
+.manga-box .box-text .read-btn i {
+    margin-right: 5px; /* Adjust this value as needed */
+}
+
+/* Style for icon container */
+.icon-container {
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Center items vertically */
+}
+
+/* Style for read icon */
+.read-btn {
+    margin-right: 10px; /* Adjust as needed to create space between icons */
+}
+
+/* Style for heart icon */
+.fav-btn {
+    color: red; /* Set color of heart icon */
+}
+
+
+/* Your existing CSS styles */
+
+.wrapper,
+.slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+.slide{
+    overflow: hidden;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+.slide .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide .image-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 100%;
+    z-index: 100;
+}
+
+.image-data span.text{
+    font-size: 100px;
+    font-weight: 800;
+    color: #eaff00;
+}
+
+.image-data h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/*swiper button css*/
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .slide {
+        margin-top: 60px; /* Adjust this value for smaller screens */
+    }
+}
+
+
+/* Add these styles for smaller screens */
+@media (max-width: 768px) {
+    .slide .image-data span.text {
+        font-size: 50px; /* Adjust this value as needed */
+    }
+
+    .slide .image-data h2 {
+        font-size: 16px; /* Adjust this value as needed */
+    }
+}
+
+@media (max-width: 468px) {
+    .slide .image-data span.text {
+        font-size: 40px; /* Adjust this value as needed */
+    }
+
+    .slide .image-data h2 {
+        font-size: 14px; /* Adjust this value as needed */
+    }
+}
+
+
+/* Footer styles */
+/* Footer styles */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0; /* Reduced padding */
+}
+
+.footer h5 {
+    color: #fff;
+    font-size: 16px; /* Reduced font size */
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.footer p {
+    font-size: 12px; /* Reduced font size */
+    line-height: 1.5;
+}
+
+
+/* Hide the search box by default */
+.search-container {
+    display: none;
+}
+
+/* Style the search box */
+#search-box {
+    padding: 5px;
+    width: 200px;
+}
+
+/* Style the search button */
+#search-submit {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*HEADING*/
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-color);
+    padding: 12px 14px;
+    border: 1px solid hsl(200 100% 99% 5%);
+    margin-bottom: 2rem;
+}
+.heading-title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.popular {
+    max-width: 100%; /* Adjust the maximum width of the section */
+    margin: auto; /* Center the section horizontally */
+    padding: 0; /* Remove padding */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.action {
+    max-width: 100%; /* Adjust the maximum width of the section */
+    margin: auto; /* Center the section horizontally */
+    padding-top: 65px;; /* Remove padding */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+
+
+
+
+.popular-content {
+    max-height: 500px; /* Adjust the maximum height of the swiper container */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+
+
+.swiper-wrapper {
+    display: flex; /* Ensure the swiper wrapper uses flexbox */
+}
+
+.swiper-slide {
+    margin: 0; /* Remove any margins from swiper slides */
+}
+
+.swiper-slide img {
+    height: 100%; /* Set the height of the images to 100% of the swiper container height */
+    width: auto; /* Allow the width to adjust proportionally */
+    max-width: 100%; /* Ensure the images don't exceed the container width */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.manga-box-img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    max-height: 300px; /* Adjust the maximum height of the image */
+    width: 100%; /* Let the width adjust proportionally */
+    height: auto; /* Let the height adjust proportionally */
+    object-fit: cover;
+    display: block;
+}
+.manga-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.manga-type {
+    color: #eaff00;
+    font-size: 15px;
+    margin-right: 10px; /* Adjust margin between manga-type and icon */
+}
+
+
+.manga-box {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    min-height: 300px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.manga-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manga-box .box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    background: linear-gradient(
+        8deg,
+        hsl(240 17% 14% / 74%) 14%,
+        hsl(240 17% 14% / 14%) 44%
+    );
+    overflow: hidden;
+}
+
+/* .read-btn i {
+    font-size: 30px; /* Adjust the font size of the icon */
+    /* position: absolute;
+    padding-left: 100px;
+    padding-bottom: 100px;
+} */ 
+
+ .read-btn{
+    
+    font-size: 15px;
+}
+
+.swiper-btn {
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    flex-direction: row-reverse;
+}
+
+.swiper-btn .swiper-button-next {
+    order: 2; /* Set the order of the next button */
+    
+}
+
+.swiper-btn .swiper-button-prev {
+    order: 1; /* Set the order of the previous button */
+    left: 1450px;
+}
+
+.swiper-btn .swiper-button-next.swiper-button-prev {
+    font-size: 5px !important; /* Adjust the font size as needed */
+}
+
+.swiper-btn .swiper-button-prev,
+.swiper-btn .swiper-button-next {
+    font-size: 1.2rem !important;
+    color: #ffffff; /* Adjust color as needed */
+    /* Adjust background color as needed */
+    padding: 5px;
+    border-radius: 50%;
+}
+.popular-content .manga-box:hover .manga-box-img{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/*Underrated manags content*/
+.underrated .heading {
+    padding: 10px 14px;
+}
+
+.under-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    
+}
+
+.under-content .manga-box:hover .manga-box-img{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.next-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.next-btn{
+    background: yellow;
+    padding: 15px 30px;
+    color: var(white);
+    font-weight: 500;
+    font-size: 15px;
+    
+}
+
+.next-btn:hover{
+    background:  white;
+    transition: .3s all linear;
+}
+
+
+
+
+
+
+
+
+
+
+ /*media query*/
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+        
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    header .icons #menu-bars{
+        display: inline-block;
+     }
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: 1rem solid rgba(0,0,0,.2);
+        border-bottom: 1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+     }
+    
+     header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+     header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+     }
+
+}
+
+@media(max-width: 468px){
+    html{
+        font-size: 50%;
+    }
+}
+
+ 

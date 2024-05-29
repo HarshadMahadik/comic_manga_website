@@ -1,0 +1,124 @@
+/* Reset default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Style for manga details container */
+.manga-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+
+/* Style for manga poster */
+.poster img {
+    max-width: 200px;
+    height: auto;
+   
+}
+
+/* Style for manga info */
+.info {
+    margin-left: 20px;
+     /* Add margin between icon and description */
+}
+.info i{
+    font-size: 15px;
+    color: #d0ff00;
+    margin-right: 10px;
+}
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d0ff00;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    
+    
+}
+
+.Author {
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 2px; /* Add margin between icon and text */
+}
+
+.fa-check-double {
+    margin-left: 10px; /* Add space before the double check icon */
+    margin-right: 5px; /* Add space between "Completed" text and the double check icon */
+}
+.fa-clock {
+    margin-left: 10px; /* Add space before the double check icon */
+    margin-right: 5px; /* Add space between "Completed" text and the double check icon */
+}
+
+/* Add space between "Completed" text and the double check icon */
+.Status {
+    margin-right: 10px; /* Adjust margin as needed */
+    font-size: 15px;
+    color: #fff;
+}
+
+/* Style for chapters section */
+.chapters {
+    margin-top: 20px;
+}
+
+.chapters h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex; /* Display chapters in a horizontal bar */
+}
+
+ul#chapterList {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 10px; /* Adjust gap between chapters as needed */
+    list-style-type: none;
+}
+
+li {
+    margin-right: 10px; /* Adjust spacing between chapters */
+    display: grid;
+    text-align: center;
+}
+
+.chapters a {
+    text-decoration: none;
+    color: #dde4eb;
+    padding: 5px 10px; /* Add padding to chapters for better clickability */
+    border: 1px solid #007bff; /* Add border to chapters for better visibility */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    font-size: 15px;
+}
+
+.chapters a:hover {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff; /* Change text color on hover */
+}
+
+/* Style for manga info */
+
+.manga-details {
+    padding: 60px;
+    background-color: #514e4e;
+    margin-top: 20px; /* Add some space between the navbar and manga-details */
+}
+

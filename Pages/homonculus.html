@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Website</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/manga-css.css">
+    
+    
+</head>
+<body>
+    
+
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>MangaVerse.</a>
+        <nav class="navbar">
+            <a href="/Homepage.html">Home</a>
+            <a href="/Manga.html">Manga</a>
+            <a href="/category.html">Category</a>
+            <!-- <a href="#latest">Latest</a>
+            <a href="#family">Family</a> -->
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <!-- Add the search box -->
+            <div class="search-container" id="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                <button id="search-submit">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+<!--header section end-->
+
+<!-- Move manga-details section below--> 
+<div class="manga-details">
+    <div class="poster">
+        <img src="/img/Homunculus.jpg" alt="Manga Poster">
+    </div>
+    <div class="info">
+        <h1 class="title">Homunculus</h1>
+        <p class="description">Trepanation is the procedure of drilling a hole in the skull. It is said to increase the blood circulation and improve pressure inside the skull. It is also said to bring out a person's sixth sense, the ability to use ESP, see ghosts, move objects with one's mind. This is speculative fiction based on the concept of trepanation.</p>
+        <i class="fa-solid fa-user"></i><p1 class="Author">YAMAMOTO Hideo</p1><i class="fa-solid fa-check-double"></i><p1 class="Status">completed</p1>
+    </div>
+</div>
+
+<div class="chapters">
+    <h2>Chapters:</h2>
+    <ul id="chapterList">
+        <li><a href="#" data-chapter="chapter1" id="One1">Chapter 1</a></li>
+        <li><a href="#" data-chapter="chapter2" id="One2">Chapter 2</a></li>
+        <li><a href="#" data-chapter="chapter3" id="One3">Chapter 3</a></li>
+        <li><a href="#" data-chapter="chapter4" id="One4">Chapter 4</a></li>
+        <li><a href="#" data-chapter="chapter5" id="One5">Chapter 5</a></li>
+        <li><a href="#" data-chapter="chapter6" id="One6">Chapter 6</a></li>
+        <li><a href="#" data-chapter="chapter7" id="One7">Chapter 7</a></li>
+        <li><a href="#" data-chapter="chapter8" id="One8">Chapter 8</a></li>
+        <li><a href="#" data-chapter="chapter9" id="One9">Chapter 9</a></li>
+        <li><a href="#" data-chapter="chapter10" id="One10">Chapter 10</a></li>
+        <li><a href="#" data-chapter="chapter11" id="One11">Chapter 11</a></li>
+        <li><a href="#" data-chapter="chapter12" id="One12">Chapter 12</a></li>
+        <li><a href="#" data-chapter="chapter13" id="One13">Chapter 13</a></li>
+        <li><a href="#" data-chapter="chapter14" id="One14">Chapter 14</a></li>
+        <li><a href="#" data-chapter="chapter15" id="One15">Chapter 15</a></li>
+        <li><a href="#" data-chapter="chapter16" id="One16">Chapter 16</a></li>
+        <li><a href="#" data-chapter="chapter17" id="One17">Chapter 17</a></li>
+        <li><a href="#" data-chapter="chapter18" id="One18">Chapter 18</a></li>
+        <li><a href="#" data-chapter="chapter19" id="One19">Chapter 19</a></li>
+        <li><a href="#" data-chapter="chapter20" id="One20">Chapter 20</a></li>
+        <li><a href="#" data-chapter="chapter21" id="One21">Chapter 21</a></li>
+        <li><a href="#" data-chapter="chapter22" id="One22">Chapter 22</a></li>
+        <li><a href="#" data-chapter="chapter23" id="One23">Chapter 23</a></li>
+        <li><a href="#" data-chapter="chapter24" id="One24">Chapter 24</a></li>
+        <li><a href="#" data-chapter="chapter25" id="One25">Chapter 25</a></li>
+        <!-- Add more chapters as needed-->
+    </ul>
+    <div id="chapterImages">
+        <!-- Images for the selected chapter will be displayed here--> 
+    </div>
+</div>
+
+
+
+<!--custom css link-->
+<script src="/main.js"></script>
+<script src="/link.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js"></script>
+    
+</body>
+</html>
+

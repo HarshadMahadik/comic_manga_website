@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Website</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .manga-box-img {
+            max-width: 200px; /* Adjust the maximum width as needed */
+            height: auto; /* Maintain aspect ratio */
+            /* Add other styles as needed */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>MangaVerse.</a>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Manga.html">Manga</a>
+            <a href="category.html">Category</a>
+            <!-- <a href="#latest">Latest</a>
+            <a href="#family">Family</a> -->
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="favourite.html" class="fas fa-heart"></a>
+            <!-- Add the search box -->
+            <div class="search-container" id="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                <button id="search-submit">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+   
+
+
+   
+    <!-- Initialize Swiper -->
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get references to the image elements and their sources
+            var images = ["one.jpg", "naru.jpg", "black.jpg"];
+            
+            var currentImageIndex = 0;
+
+            
+
+            
+
+            // Function to load the next image
+            function loadNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length; // Circular increment
+                document.querySelector('.image').src = images[currentImageIndex]; // Update image source
+            }
+            // Function to load the previous image
+            function loadPreviousImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length; // Circular decrement
+                document.querySelector('.image').src = images[currentImageIndex]; // Update image source
+            }
+
+            // Add event listener for the next button
+            document.querySelector('.swiper-button-next').addEventListener('click', function() {
+                loadNextImage();
+            });
+
+            // Add event listener for the previous button
+            document.querySelector('.swiper-button-prev').addEventListener('click', function() {
+                loadPreviousImage();
+            });
+        });
+        
+    </script>
+
+   
+   <!--Underrated Mangas start-->
+    <section class="underrated container" id="underrated">
+        <!--Heading-->
+        <div class="heading">
+            <h2 class="heading-title">Favorites</h2>     
+        </div>
+        <!--Favorites Content-->
+        <div id="favorites-container" class="under-content">
+            <!-- Cloned manga-box elements will be appended here -->
+        </div>
+    </section>
+<!--Underrated Magas end-->
+    <section class="container" id="favorites-container">
+        <!-- Favourite manga will be dynamically appended here -->
+    </section>
+
+
+
+
+
+
+
+
+
+<div id="manga-list" class="manga-list"></div>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About MangaVerse</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem. Sed posuere suscipit magna sed aliquet.</p>
+            </div>
+            
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@mangaverse.com</p>
+                <p>Phone: +123456789</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+ <!-- Swiper JS -->
+ <script src="JS/swiper-bundle.min.js"></script>
+
+
+<!--custome js file link-->
+<script src="main.js"></script>
+
+
+
+</body>
+</html>
