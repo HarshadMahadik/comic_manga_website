@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Website</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>MangaVerse.</a>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Manga.html">Manga</a>
+            <a href="category.html">Category</a>
+            
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <!--<i class="fas fa-search" id="search-icon"></i>
+            <a href="favourite.html" class="fas fa-heart"></a>
+            <!-- Add the search box -->
+            <div class="search-container" id="search-container">
+                <input type="text" id="search-box" placeholder="Search...">
+                <button id="search-submit">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide" id="slide1">
+                <img src="one.jpg" alt="" class="image"/>
+                <div class="image-data">
+                    <span class="text">One Piece</span>
+                    <h2>
+                        ONE PIECE is a legendary high-seas quest unlike any other.<br>
+                           Luffy is a young adventurer who has longed for a life of freedom ever since he can remember.<br>
+                           He sets off from his small village on a perilous journey to find the legendary<br>
+                            fabled treasure, ONE PIECE, to become King of the Pirates!</h2>
+                </div>
+            </div>
+            <div class="slide swiper-slide" id="slide2">
+                <img src="naru.jpg" alt="" class="image"/>
+                <div class="image-data">
+                    <span class="text">Naruto</span>
+                    <h2>
+                        "Naruto is a ninja-in-training whose wild antics amuse his teammates.<br>
+                        But he's completely serious about one thing: becoming the world's greatest ninja!<br> 
+                        As the battle against the Tailed Beast-targeting Akatsuki rages on, the heroic sibling<br>
+                         battle between Sasuke and Itachi eventually concludes.</h2>
+                </div>
+            </div>
+            <div class="slide swiper-slide" id="slide3" >
+                <img src="black.jpg" alt="" class="image"/>
+                <div class="image-data">
+                    <span class="text">Black Clover</span>
+                    <h2>
+                        Set in a world where everyone is given the ability to use magic,<br> 
+                        the story follows Asta, a young boy born without any magic power who<br>
+                        is given a rare grimoire that grants him anti-magic abilities. With his fellow mages<br>
+                        from the Black Bulls, Asta plans to become the next Wizard King.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+
+   
+
+
+   
+    <!-- Initialize Swiper -->
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get references to the image elements and their sources
+            var images = ["one.jpg", "naru.jpg", "black.jpg"];
+            
+            var currentImageIndex = 0;
+
+            
+
+            
+
+            // Function to load the next image
+            function loadNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length; // Circular increment
+                document.querySelector('.image').src = images[currentImageIndex]; // Update image source
+            }
+            // Function to load the previous image
+            function loadPreviousImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length; // Circular decrement
+                document.querySelector('.image').src = images[currentImageIndex]; // Update image source
+            }
+
+            // Add event listener for the next button
+            document.querySelector('.swiper-button-next').addEventListener('click', function() {
+                loadNextImage();
+            });
+
+            // Add event listener for the previous button
+            document.querySelector('.swiper-button-prev').addEventListener('click', function() {
+                loadPreviousImage();
+            });
+        });
+        
+    </script>
+
+   
+
+    
+
+    <!--Poupular Section start-->
+    <section class="popular container" id="popular">
+        <!--Heading-->
+        <div class="heading">
+            <h2 class="heading-title">Popular Choice</h2>
+            <div class="swiper-btn">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!--Content-->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!--Manga box 1-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="/img/One Piece.jpg" alt=""  class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">One Piece</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/OnePiece.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                            <!--<a href="#" class="fav-btn">
+                                <i class="fas fa-heart"></i>
+                            </a>-->
+                        </div>
+                    </div>
+                </div>
+               
+
+                <!--Manga box 2-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Naruto.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Naruto</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Naruto.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                            <!--<a href="#" class="fav-btn">
+                                <i class="fas fa-heart"></i>
+                            </a>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 3-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Bleach.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Bleach</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Bleach.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 4-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Berserk.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Berserk</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Berserk.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 5-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Black Clover.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Black Clover</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/BlackClover.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 6-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Vinland Saga.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Vinland Saga</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/VinlandSaga.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 7-->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Vagabond.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Vagabond</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Vagabond.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 8 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/One-Punch Man.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">One-Punch Man</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/OnePunchMan.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 9 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Monster.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Monster</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/monster.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 10 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Boruto_ Naruto Next Generations.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Boruto</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Boruto.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 11 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Jujutsu Kaisen.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Jujutsu Kaisen</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/jjk.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 12 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Tokyo Ghoul.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Tokyo Ghoul</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Tokyoghoul.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Manga box 13 -->
+                <div class="swiper-slide">
+                    <div class="manga-box">
+                        <img src="img/Demon Slayer - Kimetsu no Yaiba.jpg" alt="" class="manga-box-img">
+                        <div class="box-text">
+                            <h2 class="manga-title">Demon Slayer</h2>
+                            <span class="manga-type">Adventure</span>
+                            <a href="Pages/Demonslayer.html" class="read-btn">
+                                <i class="fas fa-book-reader"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+              
+        </div>
+    </section>
+    <!--popular section end-->
+
+    <!--Underrated Mangas start-->
+    <section class="underrated container" id="underrated">
+        <!--Heading-->
+        <div class="heading">
+            <h2 class="heading-title">Underrated Piece</h2>     
+        </div>
+        <!--Underrated Mnaga Content-->
+        <div class="under-content">
+            <!--Manga box 1-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/uzumaki.jpeg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Uzumaki</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/Uzumaki.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 2-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/20th Century Boys.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">20th Century Boys</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/20th Century Boys.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 3-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Tomodachi Game.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Tomodachi Game</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/TomodachiGame.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 4-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/JoJo's Bizarre Adventure Part 6_ Stone Ocean.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">JoJo's Bizarre Adventure</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/jojo.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 5-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Hunter X Hunter.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Hunter X Hunter</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/HunterxHunter.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 6-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Goodnight Punpun.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Goodnight Punpun</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/punpun.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 7-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Gintama.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Gintama</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/Ginatama.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 8-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/My Hero Academia.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">My Hero Academia</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/MHA.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 9-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Attack on Titan.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Attack on Titan</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/AOT.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 10-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Tokyo Revengers.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Tokyo Revengers</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/Tokyorevengers.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 11-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Death Note.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Death Note</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/Deathnote.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Manga box 12-->
+            <div class="swiper-slide">
+                <div class="manga-box">
+                    <img src="img/Itou Junji Kyoufu Manga Collection.jpg" alt="" class="manga-box-img">
+                    <div class="box-text">
+                        <h2 class="manga-title">Itou Junji Kyoufu Manga Collection</h2>
+                        <span class="manga-type">Adventure</span>
+                        <a href="Pages/junjiito.html" class="read-btn">
+                            <i class="fas fa-book-reader"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Underrated Magas end-->
+
+
+    <!--Next page-->
+    <div class="next-page">
+        <a href="Manga.html" class="next-btn">Read More</a>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="manga-list" class="manga-list"></div>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About MangaVerse</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem. Sed posuere suscipit magna sed aliquet.</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@mangaverse.com</p>
+                    <p>Phone: +123456789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+
+    
+
+
+     <!-- Swiper JS -->
+     <script src="JS/swiper-bundle.min.js"></script>
+    
+    
+    <!--custome js file link-->
+    <script src="main.js"></script>
+    
+
+ 
+</body>
+</html>
